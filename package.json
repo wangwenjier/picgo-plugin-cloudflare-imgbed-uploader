@@ -13,9 +13,10 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
-    "prepublishOnly": "npm run build",
+    "preversion": "npm run build",
     "version": "git add package.json package-lock.json",
-    "postversion": "git push origin main && git push origin --tags"
+    "postversion": "git push origin main && git push origin --tags",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "picgo",
