@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-cloudflare-imgbed-uploader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PicGo uploader for MarSeventh/CloudFlare-ImgBed - full API support with multi-channel upload",
   "homepage": "https://github.com/wangwenjier/picgo-plugin-cloudflare-imgbed-uploader#readme",
   "main": "dist/index.js",
