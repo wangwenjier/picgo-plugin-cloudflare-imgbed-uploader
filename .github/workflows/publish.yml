@@ -1,0 +1,37 @@
+name: Publish Package to npm
+
+# 触发条件：当你推送 v1.0.0 这种格式的 tag 时触发
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x' # 可以换成你的项目所需的 Node 版本
+          registry-url: 'https://registry.npmjs.org'
+
+      # 3. 安装依赖 (使用 npm ci 比 npm install 更稳定)
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. 构建项目 (如果你的包需要打包，比如 TypeScript 转译)
+      # 如果不需要构建，可以删除这一步
+      - name: Build
+        run: npm run build
+
+      # 5. 发布到 npm
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,50 @@
+{
+  "name": "picgo-plugin-cloudflare-imgbed-uploader",
+  "version": "1.0.0",
+  "description": "PicGo uploader for MarSeventh/CloudFlare-ImgBed - full API support with multi-channel upload",
+  "homepage": "https://github.com/wangwenjier/picgo-plugin-cloudflare-imgbed-uploader#readme",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json",
+    "logo.png"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "prepublishOnly": "npm run build",
+    "version": "git add package.json package-lock.json",
+    "postversion": "git push origin main && git push origin --tags"
+  },
+  "keywords": [
+    "picgo",
+    "picgo-gui-plugin",
+    "picgo-plugin",
+    "uploader",
+    "cloudflare-imgbed",
+    "image-upload",
+    "imgbed",
+    "cfbed"
+  ],
+  "author": "wangwenjier",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangwenjier/picgo-plugin-cloudflare-imgbed-uploader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangwenjier/picgo-plugin-cloudflare-imgbed-uploader/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "picgo": "^1.5.0",
+    "typescript": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
