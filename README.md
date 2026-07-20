@@ -17,7 +17,7 @@ PicGo 上传器插件，用于 [CloudFlare ImgBed](https://github.com/MarSeventh
 
 ### PicGo GUI
 
-在 PicGo 的"插件设置"中搜索 `picgo-plugin-cloudflare-imgbed-uploader` 并安装。
+在 PicGo 的"插件设置"中搜索 `cloudflare-imgbed-uploader` 并安装。
 
 ### 手动安装
 
